@@ -9,7 +9,7 @@ const Details = () => {
 
   useEffect(() => {
     console.log("Details")
-    const data=axios.get("http://localhost:3000/api/club").then((res) => {
+    const data=axios.get("https://kokokokoko-d299.onrender.com/api/club").then((res) => {
       console.log(res);
       setData(res.data);
     } )
@@ -27,11 +27,17 @@ const Details = () => {
 
       {
         data && data.map((item, index) => (
-          <div key={index}>
+          <div key={index} className=" flex gap-10  text-white text-xl font-bold   ">
+            <div className='bg-black/50 flex'>
+
             {/* Render your data here. For example: */}
-            <h1>{item.ClubName}</h1>
             <p>{item.fullName}</p>
             <p>{item.email}</p>
+            <p>{item.rollNo}</p>
+            <p>{item.year}</p>
+            <h1>{item.ClubName}</h1>
+            <h1>{item.link}</h1>
+            </div>
             {/* Add more fields as needed */}
           </div>
         ))

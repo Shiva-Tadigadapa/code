@@ -82,7 +82,7 @@ const Form = () => {
         formDataToSend.append('year', formData.year);
         formDataToSend.append('link', formData.link);
         
-        const response = await axios.post("http://localhost:3000/api/submit", formDataToSend).then((res) => {
+        const response = await axios.post("https://kokokokoko-d299.onrender.com/api/submit", formDataToSend).then((res) => {
           console.log(res);
           toast.success('Form submitted successfully');
         });
