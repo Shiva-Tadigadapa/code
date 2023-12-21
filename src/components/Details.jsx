@@ -27,9 +27,9 @@ const Details = () => {
 
       {
         data && data.map((item, index) => (
-          <div key={index} className=" flex gap-10  text-white text-xl font-bold   ">
-            <div className='bg-black/50 flex'>
-
+          <div key={index} className=" p-3 bg-black/50   flex flex-col items-center justify-between   text-white text-xl font-bold   ">
+            {/* <div className='bg-black/50 flex'> */}
+            {index+1}
             {/* Render your data here. For example: */}
             <p>{item.fullName}</p>
             <p>{item.email}</p>
@@ -37,7 +37,7 @@ const Details = () => {
             <p>{item.year}</p>
             <h1>{item.ClubName}</h1>
             <h1>{item.link}</h1>
-            </div>
+            {/* </div> */}
             {/* Add more fields as needed */}
           </div>
         ))
