@@ -7,11 +7,13 @@ const Sidebar = () => {
       <div className="h-[100%]">
         <h1 className="text-2xl text-center text-white font-bold  ">Sidebar</h1>
         <div className="flex flex-col p-4  gap-10 mt-10  ">
-          <button className="bg-white text-black px-8 py-3 rounded-lg">
+          <Link to="/">
+          <button className="bg-white text-black px-8 py-3 w-44 rounded-lg">
             From Upload
           </button>
+          </Link>
           <Link to="/details">
-          <button className="bg-white text-black px-8 py-3 rounded-lg">
+          <button className="bg-white text-black px-8 py-3 w-44 rounded-lg">
             Upload Details
           </button>
           </Link>

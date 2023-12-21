@@ -59,7 +59,7 @@ const Form = () => {
 
   const countryOptionTemplate = (option, props) => {
     return (
-      <div className="   w-[18rem]  h-full bg-white hover:bg-slate-400    px-4 py-3  ">
+      <div className="    w-[20rem]   h-full bg-white hover:bg-slate-400    px-4 py-3  ">
         <div className="">{option.name}</div>
       </div>
     );
@@ -97,7 +97,7 @@ const Form = () => {
 
   return (
     <div className="bg-[#9A94EB]/30  w-[75%] h-[90%] rounded-3xl  py-4 flex">
-      <div className=" text-white/90  px-6 ">
+      <div className=" text-white/90  px-6 flex  flex-col items-start ">
         <h1 className="text-2xl text-center text-white font-bold">
           Personal Details Form
         </h1>
@@ -153,12 +153,12 @@ const Form = () => {
               </div>
             </div>
 
-            <div className=" text-black">
-              <div className="flex flex-col  items-center">
+            <div className="  text-black">
+              <div className="flex flex-col  items-center justify-center">
                 <h1 className="ml-2 text-xl pb-2 text-white/90  font-semibold">
                   Enter Your Club Name
                 </h1>
-                <div className=" w-[19rem]  rounded-md bg-white px-4 py-3 ">
+                <div className=" w-[21rem]    rounded-md bg-white  py-3 ">
                   <Dropdown
                     value={ClubName}
                     onChange={(e) => setclubName(e.value)}
@@ -167,7 +167,7 @@ const Form = () => {
                     placeholder="Select a Country"
                     valueTemplate={selectedCountryTemplate}
                     itemTemplate={countryOptionTemplate}
-                    className="w-full -ml-8 rounded-md"
+                    className="w-full px-4   rounded-md"
                   />
                 </div>
               </div>
@@ -203,11 +203,11 @@ const Form = () => {
             </div>
           </div>
         </div>
-          <button className="bg-white text-black px-8 py-3 rounded-lg"onClick={handleSubmit}>
+          <button className="bg-white text-black px-8 py-3 ml-52 rounded-lg"onClick={handleSubmit}>
             Submit
           </button>
       </div>
-      <ToastContainer />
+      {/* // <ToastContainer /> */}
     </div>
   );
 };
